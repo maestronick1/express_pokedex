@@ -19,12 +19,12 @@ app.get('/', (req, res)=> {
   // Use request to call the API
   axios.get(pokemonUrl).then(response => {
     console.log(response.data)
-    let pokemon = response.data.results;
+    let pokemon = response.data.results;//the array of pokemon results
     res.render('index', { pokemon: pokemon.slice(0, 151) });
   });
 });
 
-//
+
 // Imports all routes from the pokemon routes file
 app.use('/pokemon', require('./routes/pokemon'));
 

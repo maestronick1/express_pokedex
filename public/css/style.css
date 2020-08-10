@@ -2,41 +2,51 @@ body {
     background-color: rgb(144, 230, 201);
     margin: 0 auto;
     text-align: center;
-    align-items: center;
-    font-family: pokemon hollow;
+    font-family: pokemon solid;
+    color: seashell;
+    text-shadow: 2px 4px 6px salmon;
+
     
 }
 
-img{
-    margin: auto, 0;
+img {
+    margin: 0 auto;
+    vertical-align: middle;
     height: 300px;
     width: 250px;
-    border: azure 5px solid;
-    border-radius: 30px 0px;
-    margin: auto;
-    
-    
-    
-    
-    
+    border:#F4BA70 10px groove;
+    border-radius: 70px 0px;
+
+       
 }
-.back{
+.back {
     background-color: rgb(16, 171, 182);
-    padding-top: 40px;
-    border: burlywood 5px dashed ;
-    padding-right:240px;
-}
-.name{
+    border:#F4BA70 2px groove;
+    border-radius: 180px 180px;
+    
+}  
+.name {
     color: cornsilk;
-    display: inline-block;
+    position: absolute;
+    left: 150px;
     font-family: pokemon solid;
     text-shadow: 2px 4px 6px salmon;
+    text-transform: capitalize;
     
 }
 h3{
     font-family: pokemon solid;
     text-shadow: 2px 4px 6px salmon;
     font-size: 30px;
-   
+    text-transform: capitalize;
+    color: rgb(28, 46, 100);
     
+}
+h2{
+    text-transform: capitalize;
+    color: seashell;
+    text-shadow: 2px 4px 6px salmon;
+}
+.nav-wrapper{
+    text-shadow: 2px 4px 6px rgb(30, 23, 90);
 }
