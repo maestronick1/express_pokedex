@@ -1,6 +1,15 @@
 <% pokemon.forEach((p) => {%>
     <div>
-    <a href="/pokemon/<%=p.name%>"><H1><%=p.name%></H1></a>
+    <a href="/pokemon/<%=p.name%>">
+        
+        <div class="well">
+            <h2><%= p.name %></h2></a>
+            <form method="POST" action="/pokemon?_method=DELETE">
+              <input hidden type="text" name="name" value="<%= p.name %>">
+              <button class="btn btn-primary" type="submit">delete</button>
+            </form>
+          </div>
+    
     </div>
 
 <%})%>

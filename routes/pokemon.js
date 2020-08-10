@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models');
+const db = require('../models');//database
 const axios = require('axios');
+
 //.get/users | finds all users
 //.post/users| creates a user
 //.get/user/:id/ | find user details
@@ -9,15 +10,12 @@ const axios = require('axios');
 //.patch/user/:id | updates a user
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', async(req, res)=> {
-  const pokeFound = await db.pokemon.findAll()
+  const pokeFound = await db.pokemon.findAll()//returning favorite to favoritee view
   res.render('favorites', {pokemon: pokeFound})
  });
-router.get('/pokemon/:id', async(req, res)=> {
-  const details = await db.pokemon.findAll()
-  res.render('show', {pokemon: pokeFound})
- });
 
- router.post('/', async (req, res) =>{
+
+router.post('/', async (req, res) =>{
    await db.pokemon.findOrCreate({
       where: {
         name: req.body.name,
@@ -44,5 +42,22 @@ router.get('/:name', async (req, res) => {
       console.log('Error:', err) // render error
     }
   })
+  
+  router.delete('/', async(req, res)=>{
+    try{
+      await db.pokemon.destroy({ 
+        where: {
+          name: req.body.name,
+        },
+        
+      });
+      res.redirect("/pokemon")
+    }catch(err){
+      console.log('Error:', err) // render error
+      
+  }
+
+  });
+
 
   

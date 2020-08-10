@@ -1,17 +1,19 @@
 body {
     background-color: rgb(144, 230, 201);
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     align-items: center;
+    font-family: pokemon hollow;
     
 }
 
 img{
-    margin-top: 40px;
+    margin: auto, 0;
     height: 300px;
     width: 250px;
     border: azure 5px solid;
     border-radius: 30px 0px;
+    margin: auto;
     
     
     
@@ -20,14 +22,21 @@ img{
 }
 .back{
     background-color: rgb(16, 171, 182);
-    padding-bottom: 30px;
+    padding-top: 40px;
     border: burlywood 5px dashed ;
-    padding-right:280px;
+    padding-right:240px;
 }
 .name{
     color: cornsilk;
     display: inline-block;
-    position: inherit;
-    font-family: pokemon hollow;
+    font-family: pokemon solid;
+    text-shadow: 2px 4px 6px salmon;
+    
+}
+h3{
+    font-family: pokemon solid;
+    text-shadow: 2px 4px 6px salmon;
+    font-size: 30px;
+   
     
 }

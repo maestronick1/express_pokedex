@@ -3,5 +3,14 @@
 <img src="<%=pokeData.sprites.front_default%>" alt="image">
 </div>
 <div class="details">
-<h1><%=pokeData.abilities.name%></h1>
+<h3>Ability 1:&nbsp;|
+<%=pokeData.abilities[0].ability.name%></h3>
+<h3>Ability 2:&nbsp;|
+<%=pokeData.abilities[1].ability.name%></h3>
+<h3>Height:&nbsp;|
+<%=pokeData.height%></h3>
+<h3>Exp&nbsp;|
+<%=pokeData.base_experience%></h3>
+
 </div>
+<%console.log(pokeData)%>
